@@ -35,18 +35,19 @@ public class main {
         
         
         Professor professor;
+        int cargaHoraria = Integer.parseInt(JOptionPane.showInputDialog("informe a sua carga horario: "));
+        float valorHora = Float.parseFloat(JOptionPane.showInputDialog("informe o valor da sua hora: "));
         String nomeProfessor = JOptionPane.showInputDialog("Informe o seu nome: ");
         String rg = JOptionPane.showInputDialog("Informe o seu rg: ");
         String cpf = JOptionPane.showInputDialog("Informe o seu cpf: ");
-        int cargaHoraria = Integer.parseInt(JOptionPane.showInputDialog("informe a sua carga horario: "));
-        float valorHora = Float.parseFloat(JOptionPane.showInputDialog("informe o valor da sua hora: "));
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy ");
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         Date dataNascimento =  sdf.parse(JOptionPane.showInputDialog("informe a data de nascimento:"));
         
-        professor = new Professor(nomeProfessor, rg, cpf, cargaHoraria, valorHora, dataNascimento);
+        professor = new Professor(cargaHoraria, valorHora, nomeProfessor, rg, cpf, dataNascimento);
         JOptionPane.showMessageDialog(null, professor.toString());
        
         Aluno aluno;
+        int matricula = Integer.parseInt(JOptionPane.showInputDialog("informe a sua matricula: "));
         String nomeAluno = JOptionPane.showInputDialog("Informe o seu nome: ");
         String rgAluno = JOptionPane.showInputDialog("Informe o seu rg: ");
         String cpfAluno= JOptionPane.showInputDialog("Informe o seu cpf: ");
@@ -54,7 +55,7 @@ public class main {
         Date dataNascimentoAluno =  sdf.parse(JOptionPane.showInputDialog("informe a data de nascimento:"));
         
         
-        aluno = new Aluno( dataMatricula, nomeAluno, rgAluno, cpfAluno, dataNascimentoAluno);
+        aluno = new Aluno( matricula, dataMatricula, nomeAluno, rgAluno, cpfAluno, dataNascimentoAluno);
         JOptionPane.showMessageDialog(null, aluno.toString());
     }
     

@@ -23,6 +23,7 @@ public class Professor extends Pessoa{
         this.cargaHoraria = cargaHoraria;
         this.valorHora = valorHora;
         this.salario= this.calcularSalario(cargaHoraria, valorHora);
+        
     }
     
     public float calcularSalario(float valorHora, float cargaHoraria){
