@@ -16,7 +16,6 @@ public class Aluno extends Pessoa {
     private int matricula;
     private Date dataMatricula;
     private ArrayList <Disciplina> Disciplina= new ArrayList<>();
-
     public Aluno(int matricula, Date dataMatricula, String nome, String rg, String cpf, Date datanascimento) {
         super(nome, rg, cpf, datanascimento);
         this.matricula = matricula;
