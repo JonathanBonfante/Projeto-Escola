@@ -8,12 +8,15 @@ package br.com.satc;
 import br.com.satc.objeto.Aluno;
 import br.com.satc.objeto.Disciplina;
 import br.com.satc.objeto.Professor;
+import com.sun.webkit.dom.CounterImpl;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
 import javax.swing.JOptionPane;
+import jdk.nashorn.internal.objects.NativeArray;
+import sun.applet.AppletViewer;
 
 /**
  *
@@ -99,23 +102,31 @@ public class main {
              int pesquisarDisciplina = Integer.parseInt(JOptionPane.showInputDialog("Qual a materia que você quer consultar: "));
              materias.get(pesquisarDisciplina);
              JOptionPane.showConfirmDialog(null, materias.get(pesquisarDisciplina).toString());
-             }  
+             for (Disciplina disciplina : materias) {
+                 NativeArray.forEach(args, estudantes, args);
+             }
+    
+         }        
          break;
          case 5:{
              int pesquisarDisciplina = Integer.parseInt(JOptionPane.showInputDialog("Qual a aluno que você quer consultar: "));
              materias.get(pesquisarDisciplina);
-             JOptionPane.showConfirmDialog(null, Aluno.get(pesquisarDisciplina).toString());  
+             JOptionPane.showConfirmDialog(null,Aluno.get(pesquisarDisciplina).toString()); 
+             
+            int escolha = 0;
+            switch (escolha){
          }
          break;
+         }  
          case 6:{
              int pesquisarDisciplina = Integer.parseInt(JOptionPane.showInputDialog("Qual a professor que você quer consultar: "));
              materias.get(pesquisarDisciplina);
-             JOptionPane.showConfirmDialog(null, Professor.get(pesquisarDisciplina).toString());   
+             JOptionPane.showConfirmDialog(null,Professor.get(pesquisarDisciplina).toString());   
            }
-         }
+         break;
+       }
+       
       }while (escMenu !=7);
          
-     }
- }
-    
-    
+    }
+         }

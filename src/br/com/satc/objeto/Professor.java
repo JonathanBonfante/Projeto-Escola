@@ -13,6 +13,10 @@ import java.util.Date;
  * @author jonathan.153417
  */
 public class Professor extends Pessoa{
+
+    public static Object get(int pesquisarDisciplina) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     private ArrayList<Disciplina> Disciplina= new ArrayList<>();
     private int cargaHoraria;
     private float valorHora;
